@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Sidorenkov Anton <asid.owner@gmail.com>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-06 21:06+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: server/apps/dictionaries/admin.py server/apps/dictionaries/models.py
+msgid "Dictionary version's"
+msgstr "Версии справочника"
+
+#: server/apps/dictionaries/admin.py
+msgid "Current version"
+msgstr "Текущая версия"
+
+#: server/apps/dictionaries/admin.py
+msgid "Version start date"
+msgstr "Дата начала действия версии"
+
+#: server/apps/dictionaries/admin.py server/apps/dictionaries/models.py
+msgid "Dictionary identifier"
+msgstr "Идентификатор справочника"
+
+#: server/apps/dictionaries/admin.py
+msgid "Dictionary name"
+msgstr "Справочник"
+
+#: server/apps/dictionaries/apps.py server/apps/dictionaries/models.py
+msgid "Dictionaries"
+msgstr "Справочники"
+
+#: server/apps/dictionaries/models.py
+msgid "Identifier"
+msgstr "Идентификатор"
+
+#: server/apps/dictionaries/models.py
+msgid "Code"
+msgstr "Код"
+
+#: server/apps/dictionaries/models.py
+msgid "Name"
+msgstr "Наименование"
+
+#: server/apps/dictionaries/models.py
+msgid "Description"
+msgstr "Описание"
+
+#: server/apps/dictionaries/models.py
+msgid "Dictionary"
+msgstr "Справочник"
+
+#: server/apps/dictionaries/models.py
+msgid "Version"
+msgstr "Версия"
+
+#: server/apps/dictionaries/models.py
+msgid "Date"
+msgstr "Дата"
+
+#: server/apps/dictionaries/models.py
+msgid "Dictionary version"
+msgstr "Версия справочника"
+
+#: server/apps/dictionaries/models.py
+msgid "Dictionary version identifier"
+msgstr "Идентификатор версии справочника"
+
+#: server/apps/dictionaries/models.py
+msgid "Element code"
+msgstr "Код элемента"
+
+#: server/apps/dictionaries/models.py
+msgid "Element value"
+msgstr "Значение элемента"
+
+#: server/apps/dictionaries/models.py
+msgid "Dictionary element"
+msgstr "Элемент справочника"
+
+#: server/apps/dictionaries/models.py
+msgid "Dictionary element's"
+msgstr "Элементы справочника"
