@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-09 09:50+0000\n"
+"POT-Creation-Date: 2023-03-09 10:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -194,6 +194,18 @@ msgstr "Код элемента"
 #: server/apps/dictionaries/views.py
 msgid "Example value"
 msgstr "Значение элемента"
+
+#: server/apps/dictionaries/views.py
+msgid "Validation done."
+msgstr "Валидация прошла с успехом."
+
+#: server/apps/dictionaries/views.py
+msgid "Validation failed."
+msgstr "Валидация прошла с ошибкой."
+
+#: server/apps/dictionaries/views.py
+msgid "Required query params not found."
+msgstr "Не найдены необходимые параметры запроса."
 
 #: server/apps/dictionaries/views.py
 msgid "Example response if required params are not passed"

@@ -45,8 +45,8 @@ class DictionaryListAPI(views.APIView):
                 description=misc.DATE_QUERY_PARAM_DESCRIPTION,
                 examples=[
                     OpenApiExample(
-                        str(_('Example with current date')),
-                        summary=str(_('Current date')),
+                        _('Example with current date'),
+                        summary=_('Current date'),
                         value=now().date(),
                     ),
                 ],
@@ -57,7 +57,7 @@ class DictionaryListAPI(views.APIView):
         },
         examples=[
             OpenApiExample(
-                str(_('Example successful response')),
+                _('Example successful response'),
                 response_only=True,
                 status_codes=[status.HTTP_200_OK],
                 value="""
@@ -77,7 +77,7 @@ class DictionaryListAPI(views.APIView):
                 }
                 """),
             OpenApiExample(
-                str(_('Example response if dictionary not found')),
+                _('Example response if dictionary not found'),
                 value='{"refbooks": []}',
                 response_only=True,
                 status_codes=[status.HTTP_200_OK],
@@ -137,7 +137,7 @@ class DictionaryElementListAPI(views.APIView):
                 required=True,
                 examples=[
                     OpenApiExample(
-                        str(_('Example dictionary id')),
+                        _('Example dictionary id'),
                         value='1',
                     ),
                 ],
@@ -149,7 +149,7 @@ class DictionaryElementListAPI(views.APIView):
                 description=misc.VERSION_QUERY_PARAM_DESCRIPTION,
                 examples=[
                     OpenApiExample(
-                        str(_('Example version')),
+                        _('Example version'),
                         value='vers_2',
                     ),
                 ],
@@ -160,7 +160,7 @@ class DictionaryElementListAPI(views.APIView):
         },
         examples=[
             OpenApiExample(
-                str(_('Example successful response')),
+                _('Example successful response'),
                 response_only=True,
                 status_codes=[status.HTTP_200_OK],
                 value="""
@@ -178,7 +178,7 @@ class DictionaryElementListAPI(views.APIView):
                 }
                 """),
             OpenApiExample(
-                str(_('Example response if elements not found')),
+                _('Example response if elements not found'),
                 value='{"elements": []}',
                 response_only=True,
                 status_codes=[status.HTTP_200_OK],
@@ -230,7 +230,7 @@ class DictionaryCheckElementAPI(views.APIView):
                 required=True,
                 examples=[
                     OpenApiExample(
-                        str(_('Example dictionary id')),
+                        _('Example dictionary id'),
                         value='1',
                     ),
                 ],
@@ -243,7 +243,7 @@ class DictionaryCheckElementAPI(views.APIView):
                 required=True,
                 examples=[
                     OpenApiExample(
-                        str(_('Example code')),
+                        _('Example code'),
                         value='element_111',
                     ),
                 ],
@@ -256,7 +256,7 @@ class DictionaryCheckElementAPI(views.APIView):
                 required=True,
                 examples=[
                     OpenApiExample(
-                        str(_('Example value')),
+                        _('Example value'),
                         value='value_111',
                     ),
                 ],
@@ -268,21 +268,21 @@ class DictionaryCheckElementAPI(views.APIView):
                 description=misc.VERSION_QUERY_PARAM_DESCRIPTION,
                 examples=[
                     OpenApiExample(
-                        str(_('Example version')),
+                        _('Example version'),
                         value='vers_2',
                     ),
                 ],
             ),
         ],
         responses={
-            status.HTTP_204_NO_CONTENT: OpenApiResponse(description='Validation done.'),
-            status.HTTP_404_NOT_FOUND: OpenApiResponse(description='Validation not preformed.'),
+            status.HTTP_204_NO_CONTENT: OpenApiResponse(description=_('Validation done.')),
+            status.HTTP_404_NOT_FOUND: OpenApiResponse(description=_('Validation failed.')),
             status.HTTP_400_BAD_REQUEST: OpenApiResponse(
                 response=OpenApiTypes.OBJECT,
-                description='Required query params not found.',
+                description=_('Required query params not found.'),
                 examples=[
                     OpenApiExample(
-                        str(_('Example response if required params are not passed')),
+                        _('Example response if required params are not passed'),
                         value="""
                         {
                             "message": "Validation error",
