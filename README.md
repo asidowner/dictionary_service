@@ -1,6 +1,8 @@
 # dictionary-service
 
 [![Built with](https://img.shields.io/badge/Built_with-Cookiecutter_Django_Rest-F7B633.svg)](https://github.com/agconti/cookiecutter-django-rest)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c02aa4a7e79ce48b7554/maintainability)](https://codeclimate.com/github/asidowner/dictionary_service/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/c02aa4a7e79ce48b7554/test_coverage)](https://codeclimate.com/github/asidowner/dictionary_service/test_coverage)
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/GB6Eki?referralCode=U5zXSw)
 

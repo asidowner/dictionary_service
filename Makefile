@@ -35,6 +35,10 @@ mypy:
 test:
 	poetry run pytest --cov-fail-under=90
 
+.PHONY: coverage-xml
+coverage-xml:
+	poetry run coverage xml
+
 django-check:
 	@$(MANAGE) check --fail-level WARNING
 
@@ -54,7 +58,10 @@ pip-check:
 	poetry run pip check
 
 .PHONY: check
-check: lint mypy test django-check django-check-production migration-check safety-check poetry-check pip-check requirements.txt
+check: lint mypy test django-check django-check-production migration-check safety-check poetry-check pip-check
+
+.PHONY: self-check
+self-check: check requirements.txt
 
 .PHONY: secretkey
 secretkey:
