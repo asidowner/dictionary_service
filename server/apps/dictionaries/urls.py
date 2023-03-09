@@ -5,14 +5,14 @@ from server.apps.dictionaries import views
 urlpatterns = [
     path(
         '',
-        views.DictionaryListApi.as_view(),
+        views.DictionaryListAPI.as_view(),
     ),
     path(
         '<int:dictionary_id>/elements',
-        views.DictionaryElementListApi.as_view(),
+        views.DictionaryElementListAPI.as_view(),
     ),
     path(
         '<int:dictionary_id>/check_element',
-        views.DictionaryCheckElementApi.as_view(),
+        views.DictionaryCheckElementAPI.as_view(),
     ),
 ]

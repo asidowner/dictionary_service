@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-07 20:09+0000\n"
+"POT-Creation-Date: 2023-03-09 09:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,17 +36,80 @@ msgstr "Текущая версия"
 msgid "Version start date"
 msgstr "Дата начала действия версии"
 
-#: server/apps/dictionaries/admin.py server/apps/dictionaries/models.py
+#: server/apps/dictionaries/admin.py server/apps/dictionaries/misc.py
+#: server/apps/dictionaries/models.py
 msgid "Dictionary identifier"
 msgstr "Идентификатор справочника"
 
 #: server/apps/dictionaries/admin.py
 msgid "Dictionary name"
-msgstr "Справочник"
+msgstr "Наименование справочника"
 
 #: server/apps/dictionaries/apps.py server/apps/dictionaries/models.py
 msgid "Dictionaries"
 msgstr "Справочники"
+
+#: server/apps/dictionaries/misc.py
+msgid "Obtaining a list of dictionaries."
+msgstr "Получение списка справочников."
+
+#: server/apps/dictionaries/misc.py
+msgid ""
+"Obtaining a list of dictionaries. An additional option is to retrieve the "
+"current ones as of a specified date."
+msgstr ""
+"Получение списка справочников. Дополнительно, возможно, получить актуальные "
+"на указанную дату."
+
+#: server/apps/dictionaries/misc.py
+msgid "Retrieving elements from a given dictionaries."
+msgstr "Получение элементов заданного справочника."
+
+#: server/apps/dictionaries/misc.py
+msgid ""
+"Retrieving elements from a given dictionaries. Can return according to the "
+"dictionary version."
+msgstr ""
+"Получение элементов заданного справочника. Можно вернуть соответствующие "
+"указанной версии."
+
+#: server/apps/dictionaries/misc.py
+msgid "Validation an element"
+msgstr "Валидация элемента"
+
+#: server/apps/dictionaries/misc.py
+msgid ""
+"Validation of a dictionary element is a check that the item with the given "
+"code and value is present in the specified version of the dictionary."
+msgstr ""
+"Валидация элемента справочника - это проверка на то, что элемент с данным "
+"кодом и значением присутствует в указанной версии справочника."
+
+#: server/apps/dictionaries/misc.py
+msgid ""
+"Start date in format YYYY-MM-DD. If not passed, all dictionaries are "
+"returned."
+msgstr ""
+"Дата начала действия в формате ГГГГ-ММ-ДД. Если не указана, все словари "
+"будут возвращены."
+
+#: server/apps/dictionaries/misc.py
+msgid ""
+"Version of dictionary. If not passed, elements of the current version are "
+"returned. The current version is the one whose start date is later than all "
+"other versions of  the dictionary, but not later than the current date."
+msgstr ""
+"Версия справочника. Если не указана, то должны возвращаться элементы текущей "
+"версии. Текущей является та версия, дата начала действия которой позже всех "
+"остальных версий данного справочника, но не позже текущей даты."
+
+#: server/apps/dictionaries/misc.py
+msgid "Code of a dictionary element"
+msgstr "Код элемента справочника"
+
+#: server/apps/dictionaries/misc.py
+msgid "Value of a dictionary element"
+msgstr "Значение элемента справочника"
 
 #: server/apps/dictionaries/models.py
 msgid "Code"
@@ -95,3 +158,43 @@ msgstr "Элемент справочника"
 #: server/apps/dictionaries/models.py
 msgid "Dictionary element's"
 msgstr "Элементы справочника"
+
+#: server/apps/dictionaries/views.py
+msgid "Example with current date"
+msgstr "Пример с текущей датой"
+
+#: server/apps/dictionaries/views.py
+msgid "Current date"
+msgstr "Текущая версия"
+
+#: server/apps/dictionaries/views.py
+msgid "Example successful response"
+msgstr "Пример успешного ответа"
+
+#: server/apps/dictionaries/views.py
+msgid "Example response if dictionary not found"
+msgstr "Пример ответа если словари не найдены"
+
+#: server/apps/dictionaries/views.py
+msgid "Example dictionary id"
+msgstr "Пример идентификатора справочника"
+
+#: server/apps/dictionaries/views.py
+msgid "Example version"
+msgstr "Пример версии"
+
+#: server/apps/dictionaries/views.py
+msgid "Example response if elements not found"
+msgstr "Пример ответа если элементы не найдены"
+
+#: server/apps/dictionaries/views.py
+msgid "Example code"
+msgstr "Код элемента"
+
+#: server/apps/dictionaries/views.py
+msgid "Example value"
+msgstr "Значение элемента"
+
+#: server/apps/dictionaries/views.py
+msgid "Example response if required params are not passed"
+msgstr "Пример ответа если запрашиваемые параметры не переданы"

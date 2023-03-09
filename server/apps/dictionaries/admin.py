@@ -75,12 +75,11 @@ class DictionaryElementInlines(admin.StackedInline):  # type: ignore[type-arg]
 class DictionaryVersionAdmin(admin.ModelAdmin[models.DictionaryVersion]):
     """Register dictionary version model editor with dictionary elements inlines."""
 
-    list_display = ('dictionary_id', 'dictionary_name', 'version', 'date')
-    list_display_links = ('version',)
+    list_display = ('version', 'dictionary_identifier', 'dictionary_name', 'date')
     inlines = [DictionaryElementInlines]
 
     @admin.display(description=_('Dictionary identifier'))
-    def dictionary_id(self, version: models.DictionaryVersion) -> int:
+    def dictionary_identifier(self, version: models.DictionaryVersion) -> int:
         """Return dictionary id."""
         return version.dictionary.id
 
@@ -88,12 +87,6 @@ class DictionaryVersionAdmin(admin.ModelAdmin[models.DictionaryVersion]):
     def dictionary_name(self, version: models.DictionaryVersion) -> str:
         """Return dictionary name."""
         return version.dictionary.name
-
-    def get_queryset(self, request):
-        """Override method for select related dictionary table."""
-        return super().get_queryset(
-            request,
-        ).select_related('dictionary')
 
 
 @admin.register(models.DictionaryElement)
