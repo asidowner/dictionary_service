@@ -23,10 +23,10 @@ psycopg2 = "^2.9.5"
 
 [tool.poetry.group.dev.dependencies]
 ipdb = "0.13.11"
-ipython = "8.9.0"
+ipython = "8.11.0"
 mock = "5.0.1"
 django-nose = "1.4.7"
-coverage = "7.1.0"
+coverage = "7.2.1"
 factory-boy = "3.2.1"
 django-debug-toolbar = "3.8.1"
 
@@ -43,12 +43,11 @@ django-coverage-plugin = "^2.0"
 pytest-randomly = "^3.12"
 pytest-timeout = "^2.1"
 django-test-migrations = "^1.2"
-hypothesis = "^6.54"
+faker = "^17.6.0"
 
-safety = "2.1"
-mkdocs = "1.4.2"
+safety = "2.3.5"
 
-mypy = "1.0.1"
+mypy = "1.1.1"
 django-stubs = "1.15.0"
 
 [build-system]

@@ -12,6 +12,7 @@ SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 INSTALLED_APPS: Tuple[str, ...] = (
     'django.contrib.admin',
+    'django.contrib.admindocs',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -35,6 +36,7 @@ MIDDLEWARE: Tuple[str, ...] = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.admindocs.middleware.XViewMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 )
 
@@ -49,6 +51,8 @@ DATABASES = {
         default='sqlite:///db.sqlite3',
     ),
 }
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 # General
 APPEND_SLASH = False
@@ -79,9 +83,7 @@ LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            BASE_DIR.joinpath('server', 'static')  # FIXME
-        ],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -110,5 +112,3 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',  # noqa: E501
     },
 ]
-
-

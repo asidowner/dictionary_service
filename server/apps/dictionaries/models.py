@@ -1,22 +1,23 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-_DICTIONARY_CODE_MAX_LENGTH = 100
-_DICTIONARY_NAME_MAX_LENGTH = 300
-_DICTIONARY_ELEMENT_VERSION_MAX_LENGTH = 50
-_DICTIONARY_ELEMENT_CODE_MAX_LENGTH = 100
-_DICTIONARY_ELEMENT_VALUE_MAX_LENGTH = 300
+DICTIONARY_CODE_MAX_LENGTH = 100
+DICTIONARY_NAME_MAX_LENGTH = 300
+DICTIONARY_VERSION_VERSION_MAX_LENGTH = 50
+DICTIONARY_ELEMENT_CODE_MAX_LENGTH = 100
+DICTIONARY_ELEMENT_VALUE_MAX_LENGTH = 300
 
 
 class Dictionary(models.Model):
-    id = models.AutoField(primary_key=True, verbose_name=_('Identifier'))
+    """Model for saving dictionary base data."""
+
     code = models.CharField(
-        max_length=_DICTIONARY_CODE_MAX_LENGTH,
+        max_length=DICTIONARY_CODE_MAX_LENGTH,
         unique=True,
         verbose_name=_('Code'),
     )
     name = models.CharField(
-        max_length=_DICTIONARY_NAME_MAX_LENGTH,
+        max_length=DICTIONARY_NAME_MAX_LENGTH,
         verbose_name=_('Name'),
     )
     description = models.TextField(blank=True, verbose_name=_('Description'))
@@ -31,14 +32,15 @@ class Dictionary(models.Model):
 
 
 class DictionaryVersion(models.Model):
-    id = models.AutoField(primary_key=True, verbose_name=_('Identifier'))
+    """Model for saving dictionary version."""
+
     dictionary = models.ForeignKey(
         Dictionary,
         on_delete=models.CASCADE,
         verbose_name=_('Dictionary identifier'),
     )
     version = models.CharField(
-        max_length=_DICTIONARY_ELEMENT_VERSION_MAX_LENGTH,
+        max_length=DICTIONARY_VERSION_VERSION_MAX_LENGTH,
         verbose_name=_('Version'),
     )
     date = models.DateField(verbose_name=_('Date'))
@@ -63,21 +65,19 @@ class DictionaryVersion(models.Model):
 
 
 class DictionaryElement(models.Model):
-    id = models.AutoField(
-        primary_key=True,
-        verbose_name=_('Identifier'),
-    )
+    """Model for saving dictionary elements."""
+
     version = models.ForeignKey(
         DictionaryVersion,
         on_delete=models.CASCADE,
         verbose_name=_('Dictionary version identifier'),
     )
     code = models.CharField(
-        max_length=_DICTIONARY_ELEMENT_CODE_MAX_LENGTH,
+        max_length=DICTIONARY_ELEMENT_CODE_MAX_LENGTH,
         verbose_name=_('Element code'),
     )
     value = models.CharField(  # noqa: WPS110
-        max_length=_DICTIONARY_ELEMENT_VALUE_MAX_LENGTH,
+        max_length=DICTIONARY_ELEMENT_VALUE_MAX_LENGTH,
         verbose_name=_('Element value'),
     )
 

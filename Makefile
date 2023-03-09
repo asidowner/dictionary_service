@@ -21,7 +21,7 @@ setup: install migrate create_superuser
 
 .PHONY: start
 start:
-	@$(MANAGE) runserver 0.0.0.0:8000
+	@$(MANAGE) runserver localhost:8000
 
 .PHONY: lint
 lint:
@@ -33,7 +33,7 @@ mypy:
 
 .PHONY: test
 test:
-	poetry run pytest
+	poetry run pytest --cov-fail-under=90
 
 django-check:
 	@$(MANAGE) check --fail-level WARNING

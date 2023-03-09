@@ -12,6 +12,6 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.SessionAuthentication',
     ),
-    'EXCEPTION_HANDLER': 'server.apps.api.exception_handlers.proposed_exception_handler',  # noqa: E501
+    'EXCEPTION_HANDLER': 'server.apps.core.exception_handlers.proposed_exception_handler',  # noqa: E501
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
